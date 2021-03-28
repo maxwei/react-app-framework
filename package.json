@@ -1,0 +1,34 @@
+{
+  "name": "react-app-framework",
+  "version": "1.0.0",
+  "description": "webpack-react-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxwei/react-app-framework.git"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": {
+    "name": "maxwei",
+    "email": "weilongwonderful@foxmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxwei/react-app-framework/issues"
+  },
+  "homepage": "https://github.com/maxwei/react-app-framework#readme",
+  "devDependencies": {
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

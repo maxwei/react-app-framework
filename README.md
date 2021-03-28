@@ -2,7 +2,21 @@
 
 ## 技术说明
 
-webpack5+react+eslint+jslint
+```bash
+webpack
+react
+redux
+eslint
+jslint
+typescript
+immutable
+vscode配置
+mock数据
+angularjs规范
+antdjs
+iconFont使用
+```
+
 
 ### 安装/启动：
 
