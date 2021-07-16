@@ -1,11 +1,12 @@
-import _ from 'lodash';
+'use strict';
 
- function component() {
-   const element = document.createElement('div');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './style.less'
+class Index extends React.Component{
+  render(){
+    return <div className='hello'>index页面</div>
+  }
+}
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-   return element;
- }
-
- document.body.appendChild(component());
+ReactDOM.render(<Index/>,document.getElementById('root'))
