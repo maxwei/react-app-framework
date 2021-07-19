@@ -1,13 +1,16 @@
 const path = require('path');
-const webpack =require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   target: 'web',
   mode:'development',
-  entry: './src/index.jsx',
+  entry:{
+    index:'./src/index.jsx'
+  } ,
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean:true,
   },
   module: {
     rules: [
@@ -59,9 +62,11 @@ module.exports = {
       },
     ]
   },
-  // plugins:[
-  //   new webpack.HotModuleReplacementPlugin()
-  // ],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template:'./src/index.html'
+    }),
+  ],
   devServer:{
     contentBase:'./dist',
     hot:true
