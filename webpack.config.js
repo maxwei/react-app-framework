@@ -1,8 +1,10 @@
 const path = require('path');
+const webpack =require('webpack');
 
 module.exports = {
+  target: 'web',
   mode:'development',
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -10,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test:/\.js/i,
+        test:/\.(js|jsx|ts|tsx)/i,
         use:'babel-loader'
       },
       {
@@ -39,6 +41,30 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        // use:[
+        //   {
+        //   loader:'url-loader',
+        //   options:{
+        //     limit:10240
+        //   }
+        // }]
+        type: 'asset/resource'
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        // use:'file-loader'
+        type: 'asset/resource'
+      },
     ]
-  }
+  },
+  // plugins:[
+  //   new webpack.HotModuleReplacementPlugin()
+  // ],
+  devServer:{
+    contentBase:'./dist',
+    hot:true
+  },
+
 };

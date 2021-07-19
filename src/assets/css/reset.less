@@ -1,0 +1,123 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+/*全局a标签消除样式*/
+a {
+  text-decoration: none;
+}
+a:hover{
+text-decoration: none;
+}
+a:active{
+text-decoration: none;
+}
+a:visited{
+text-decoration: none;
+}
+a:focus{
+text-decoration: none;
+}
+
+/*滚动条*/
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  /* background-color: #fdfdfd; */
+  background-color: #003566;
+}
+
+::-webkit-scrollbar-thumb {
+  /* background-color: #cfcfcf; */
+  background-color: #006995;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* background-color: #a19b9a; */
+  background-color: #0d72ac;
+}
+
+::-webkit-scrollbar-thumb:active {
+  /* background-color: #b4b6af; */
+  background-color: #1b7fb8;
+}
+
+/*单选、复选样式*/
+input[type='checkbox'] {
+  margin: 0;
+  margin-right: 7px;
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  background: url('../imgs/ico-checkbox.png') left top no-repeat;
+
+  &:checked {
+    background: url('../imgs/ico-checkbox-selected.png') left top no-repeat;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+input[type='radio'] {
+  margin: 0;
+  margin-right: 7px;
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  background: url('../imgs/ico-radio-unselected.png') left top no-repeat;
+
+  &:checked {
+    background: url('../imgs/ico-radio-selected.png') left top no-repeat;
+  }
+}
